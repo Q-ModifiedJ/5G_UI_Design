@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ImageButton
+        android:id="@+id/OverviewButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:background="@drawable/overview"
+        android:scaleType="centerInside"
+        android:layout_marginLeft="10dp"
+        android:text="概览" />
+
+    <ImageButton
+        android:id="@+id/AreaButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:background="@drawable/area"
+        android:scaleType="centerInside"
+        android:layout_marginLeft="10dp"
+        android:text="区域" />
+
+    <ImageButton
+        android:id="@+id/EquipmentButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:background="@drawable/equipment"
+        android:scaleType="centerInside"
+        android:layout_marginLeft="10dp"
+        android:text="接入设备" />
+
+    <ImageButton
+        android:id="@+id/BaseStationButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:background="@drawable/base_station"
+        android:scaleType="centerInside"
+        android:layout_marginLeft="10dp"
+        android:text="基站业务" />
+
+</LinearLayout>
