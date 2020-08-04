@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Area.Area_Details"></activity>
         <activity
             android:name=".Overview.OverviewActivity"
             android:launchMode="singleTask">
@@ -47,8 +48,9 @@
         </activity>
         <activity android:name=".BaseStation.BaseStationInfoActivity">
             <intent-filter>
-                <action android:name="com.myapplication.UIDesign.BaseStation.BaseStationInfoActivity"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.myapplication.UIDesign.BaseStation.BaseStationInfoActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
