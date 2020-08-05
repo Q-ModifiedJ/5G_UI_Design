@@ -11,16 +11,20 @@ import com.myapplication.UIDesign.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 基站主界面
+ */
 public class BaseStationActivity extends AppCompatActivity {
-    private List<BaseStationItem> baseStationItems=new ArrayList<>();
+    private List<BaseStationItem> baseStationItems=new ArrayList<>();//主界面信息
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base_station);
-        this.setTitle(getClass().getSimpleName());
+        this.setTitle(getClass().getSimpleName());//设置标题
 
-        InitBaseStationItems();
+        InitBaseStationItems();//信息初始化，可以拓展成接口
+        //对信息的展示
         RecyclerView recyclerView=(RecyclerView)findViewById(R.id.base_station_recycler_view);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -28,6 +32,9 @@ public class BaseStationActivity extends AppCompatActivity {
         recyclerView.setAdapter(baseStationItemAdapter);
     }
 
+    /**
+     * 简单地初始化信息
+     */
     public void InitBaseStationItems(){
         BaseStationItem baseStationItem1=new BaseStationItem("CentralPark-Ring1-gNodeB1",
                 "上线状态   Failure","运行状态   Normal",

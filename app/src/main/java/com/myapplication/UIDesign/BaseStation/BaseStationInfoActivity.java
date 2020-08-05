@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import com.myapplication.UIDesign.R;
 
+/**
+ * 展示每一个地区的基站详细信息
+ */
 public class BaseStationInfoActivity extends AppCompatActivity {
     private BaseStationInfoItem baseStationInfoItem;
 
@@ -16,13 +19,17 @@ public class BaseStationInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base_station_info);
 
-        Intent intent=getIntent();
+        Intent intent=getIntent();//获取地区的信息
         String address=intent.getStringExtra("address");
-        getBaseStationInfoItem(address);
+        getBaseStationInfoItem(address);//根据地址获取详细信息，可拓展为接口
         this.setTitle(address);
-        showInfo();
+        showInfo();//展示信息
     }
 
+    /**
+     * 根据地址获取详细信息，可拓展为接口
+     * @param address 基站地址
+     */
     private void getBaseStationInfoItem(String address){
         baseStationInfoItem=new BaseStationInfoItem(address);
         baseStationInfoItem.setCity("南京EMBB");
