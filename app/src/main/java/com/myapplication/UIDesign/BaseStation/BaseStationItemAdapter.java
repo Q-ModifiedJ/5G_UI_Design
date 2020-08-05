@@ -15,6 +15,9 @@ import com.myapplication.UIDesign.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 基站主界面的Adapter，用来对recyclerview进行设置
+ */
 public class BaseStationItemAdapter extends RecyclerView.Adapter<BaseStationItemAdapter.ViewHolder>{
     private List<BaseStationItem> baseStationItems=new ArrayList<>();
 

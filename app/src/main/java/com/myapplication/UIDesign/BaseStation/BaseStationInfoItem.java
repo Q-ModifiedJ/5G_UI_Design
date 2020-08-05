@@ -1,5 +1,8 @@
 package com.myapplication.UIDesign.BaseStation;
 
+/**
+ * 存储详细基站信息
+ */
 public class BaseStationInfoItem {
     private String address;
     private String deploymentStatus;
