@@ -1,6 +1,7 @@
 package com.myapplication.UIDesign.BaseStation;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -29,6 +30,7 @@ public class BaseStationActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         BaseStationItemAdapter baseStationItemAdapter=new BaseStationItemAdapter(baseStationItems);
+        recyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
         recyclerView.setAdapter(baseStationItemAdapter);
     }
 

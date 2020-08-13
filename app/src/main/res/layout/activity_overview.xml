@@ -34,7 +34,8 @@
 
         </LinearLayout>
     </ScrollView>
-    <include layout="@layout/bottom_bar"/>
+
+    <include layout="@layout/tab_menu"/>
 
 
 </LinearLayout>
