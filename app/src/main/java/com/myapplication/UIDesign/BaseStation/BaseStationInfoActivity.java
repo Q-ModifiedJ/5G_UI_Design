@@ -45,22 +45,22 @@ public class BaseStationInfoActivity extends AppCompatActivity {
 
     private void showInfo(){
         TextView textView=(TextView)findViewById(R.id.base_station_info_city);
-        textView.setText("地市                     "+baseStationInfoItem.getCity());
+        textView.setText(baseStationInfoItem.getCity());
         textView=(TextView)findViewById(R.id.base_station_info_community);
-        textView.setText("区                          "+baseStationInfoItem.getCommunity());
+        textView.setText(baseStationInfoItem.getCommunity());
         textView=(TextView)findViewById(R.id.base_station_info_deploymentStatus);
-        textView.setText("上线状态             "+baseStationInfoItem.getDeploymentStatus());
+        textView.setText(baseStationInfoItem.getDeploymentStatus());
         textView=(TextView)findViewById(R.id.base_station_info_operatingStatus);
-        textView.setText("运行状态             "+baseStationInfoItem.getOperatingStatus());
+        textView.setText(baseStationInfoItem.getOperatingStatus());
         textView=(TextView)findViewById(R.id.base_station_info_Remarks);
-        textView.setText("备注                     "+baseStationInfoItem.getRemarks());
+        textView.setText(baseStationInfoItem.getRemarks());
         textView=(TextView)findViewById(R.id.base_station_info_time);
-        textView.setText("上线时间             "+baseStationInfoItem.getTime());
+        textView.setText(baseStationInfoItem.getTime());
         textView=(TextView)findViewById(R.id.base_station_info_type);
-        textView.setText("类型                      "+baseStationInfoItem.getType());
+        textView.setText(baseStationInfoItem.getType());
         textView=(TextView)findViewById(R.id.base_station_info_UNIInterface);
-        textView.setText("UNIInterface       "+baseStationInfoItem.getUNIInterface());
+        textView.setText(baseStationInfoItem.getUNIInterface());
         textView=(TextView)findViewById(R.id.base_station_info_vpnName);
-        textView.setText("VpnName            "+baseStationInfoItem.getVpnName());
+        textView.setText(baseStationInfoItem.getVpnName());
     }
 }

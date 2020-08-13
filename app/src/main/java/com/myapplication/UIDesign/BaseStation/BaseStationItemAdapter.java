@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -44,7 +45,7 @@ public class BaseStationItemAdapter extends RecyclerView.Adapter<BaseStationItem
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.base_station_item,parent,false);
         final ViewHolder viewHolder=new ViewHolder(view);
         viewHolder.address.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +56,19 @@ public class BaseStationItemAdapter extends RecyclerView.Adapter<BaseStationItem
                 Intent intent=new Intent("com.myapplication.UIDesign.BaseStation.BaseStationInfoActivity");
                 intent.putExtra("address",baseStationItem.getAddress());
                 ((Activity) view.getContext()).startActivity(intent);
+            }
+        });
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RecyclerView recyclerView=(RecyclerView) parent.findViewById(R.id.base_station_recycler_view);
+                int position=viewHolder.getAdapterPosition();
+                View itemView = recyclerView .getLayoutManager().findViewByPosition(position);
+                Button button=itemView.findViewById(R.id.base_station_deploy);
+                if(button.getVisibility()==View.VISIBLE)
+                    button.setVisibility(View.GONE);
+                else
+                    button.setVisibility(View.VISIBLE);
             }
         });
         return viewHolder;
