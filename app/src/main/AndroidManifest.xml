@@ -12,7 +12,14 @@
         <activity android:name=".Overview.zhutu"></activity>
         <activity android:name=".Overview.pie2" />
         <activity android:name=".Overview.pie1" />
-        <activity android:name=".Area.Area_Details" />
+        <activity android:name=".Area.Area_Details" >
+            <intent-filter>
+                <action android:name="com.myapplication.UIDesign.Area.Area_Details" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.myapplication.UIDesign.Area.Area_Details.MY_CATEGORY" />
+
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Overview.OverviewActivity"
             android:launchMode="singleTask">
