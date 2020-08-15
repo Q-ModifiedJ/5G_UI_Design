@@ -4,49 +4,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:id="@+id/base_station_info_deploymentStatus"
+        android:id="@+id/equipment_info_onlineStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"/>
     <TextView
-        android:id="@+id/base_station_info_operatingStatus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"/>
-
-    <TextView
-        android:id="@+id/base_station_info_time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp" />
-
-    <TextView
-        android:id="@+id/base_station_info_type"
+        android:id="@+id/equipment_info_operatingStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"/>
     <TextView
-        android:id="@+id/base_station_info_vpnName"
+        android:id="@+id/equipment_info_onlineTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"/>
     <TextView
-        android:id="@+id/base_station_info_community"
+        android:id="@+id/equipment_info_esn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"/>
     <TextView
-        android:id="@+id/base_station_info_city"
+        android:id="@+id/equipment_info_accessRingName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"/>
     <TextView
-        android:id="@+id/base_station_info_UNIInterface"
+        android:id="@+id/equipment_info_lookbackIP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"/>
     <TextView
-        android:id="@+id/base_station_info_Remarks"
+        android:id="@+id/equipment_info_NNIInterface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/equipment_info_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"/>
