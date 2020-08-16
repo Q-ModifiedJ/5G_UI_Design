@@ -1,37 +1,40 @@
 package com.myapplication.UIDesign.BaseStation;
 
-import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
 
 import com.myapplication.UIDesign.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * 基站主界面
- */
-public class BaseStationActivity extends AppCompatActivity {
+public class BaseStationFragment extends Fragment {
     private List<BaseStationItem> baseStationItems=new ArrayList<>();//主界面信息
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base_station);
-        this.setTitle(getClass().getSimpleName());//设置标题
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view=inflater.inflate(R.layout.fragment_base_station,container,false);
 
         InitBaseStationItems();//信息初始化，可以拓展成接口
         //对信息的展示
-        RecyclerView recyclerView=(RecyclerView)findViewById(R.id.base_station_recycler_view);
-        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
+        RecyclerView recyclerView=(RecyclerView)view.findViewById(R.id.base_station_recycler_view);
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(view.getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         BaseStationItemAdapter baseStationItemAdapter=new BaseStationItemAdapter(baseStationItems);
-        recyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
+        recyclerView.addItemDecoration(new DividerItemDecoration(view.getContext(),DividerItemDecoration.VERTICAL));
         recyclerView.setAdapter(baseStationItemAdapter);
+        return view;
     }
 
     /**

@@ -34,8 +34,4 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <include layout="@layout/tab_menu"/>
-
-
 </LinearLayout>
